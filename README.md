@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+![](./tab.png)
+# Like My Photo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React app that allows users to like a photo. The app uses useState to track the state of the like button, and it uses the AiFillHeart and AiOutlineHeart icons from react-icons to render the like button.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started, clone the repo and install the dependencies:
 
-### `npm start`
+```
+git clone https://github.com/your-username/like-my-photo.git
+cd like-my-photo
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once the dependencies are installed, you can start the app by running:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm start
+```
 
-### `npm test`
+The app will be available at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Code Explanation
 
-### `npm run build`
+The code for the app is located in the `src/app/LikeMyPhoto.jsx` file. The file starts by importing the necessary React and react-icons libraries.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+import React, { useState } from "react";
+import Title from "../components/Title";
+import {
+  AiFillSmile,
+  AiFillHeart,
+  AiOutlineHeart,
+  AiOutlineComment,
+} from "react-icons/ai";
+import girl from "../girl.jpg";
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The `LikeMyPhoto` component is then defined. The component uses useState to track the state of the like button. The initial state of the like button is set to `false`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+const [like, setlike] = useState(false);
+```
 
-### `npm run eject`
+The component also defines a `toggleLike` function. This function is called when the user clicks the like button. The function toggles the state of the like button.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```js
+const toggleLike = () => {
+  // if like is not true
+  if (!like) {
+    setlike(true);
+  } else {
+    setlike(false);
+  }
+};
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The `render` method of the component returns the HTML for the app. The HTML includes a title, a card, and a like button.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```js
+return (
+  <main className="container m-top-2 " style={{ textAlign: "center" }}>
+    <h1>
+      {/* titel component */}
+      <Title classes={"mb-4 title text-center"} title={" Like My Photo "} />
+      <Title classes={"mb-4 subtitle text-center"} title={`LIKE:${count}`} />
+      {/* card tages */})
+```
