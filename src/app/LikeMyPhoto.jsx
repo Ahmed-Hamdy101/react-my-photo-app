@@ -8,9 +8,12 @@ import {
 } from "react-icons/ai";
 import girl from "../girl.jpg";
 export default function RandomizeColors() {
+  // useState in react
   const [like, setlike] = useState(false);
   const [count, setcount] = useState(0);
+  // like toggleHandler
   const toggleLike = () => {
+    // if like is not true
     if (!like) {
       setlike(true);
       setcount(count + 1);
