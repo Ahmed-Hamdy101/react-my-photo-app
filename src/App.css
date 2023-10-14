@@ -1319,7 +1319,7 @@ body, html {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  margin-left: 50px;
   margin-bottom: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -1357,7 +1357,10 @@ border-top: none !important ;
 margin: 0;
 padding: 0;
 width : 100%}
-
+.card img{
+  height: fit-content;
+  margin: 0%;
+}
 
 .footer {
   background-color: #333;
