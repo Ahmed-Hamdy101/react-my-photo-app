@@ -1,4 +1,9 @@
+<div align="center">
+  
 ![](./tab.png)
+
+</div>
+
 # Like My Photo
 
 This is a simple React app that allows users to like a photo. The app uses useState to track the state of the like button, and it uses the AiFillHeart and AiOutlineHeart icons from react-icons to render the like button.
